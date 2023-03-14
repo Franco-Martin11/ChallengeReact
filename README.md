@@ -23,6 +23,12 @@ Keep in mind that the prices are stored in cents, but should be displayed in dol
 
 Access my site at [BeerShop](https://challenge-react-gules.vercel.app/)
 
+### Screenshot 
+
+![Home](https://user-images.githubusercontent.com/96245472/224920896-eb1c4db2-dea9-4783-8538-c90d3a590fa7.png)
+
+![Detail-corona-premier](https://user-images.githubusercontent.com/96245472/224920888-a5da36fd-f797-4223-9f52-a1f05eb676ad.png)
+
 ## Getting Started
 
 First, run the development server:
