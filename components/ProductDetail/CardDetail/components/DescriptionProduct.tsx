@@ -1,8 +1,8 @@
 import React from "react";
 
-type Props = {};
+type Props = { desciption: string };
 
-const DescriptionProduct = ({ desciption }) => {
+const DescriptionProduct = ({ desciption }: Props) => {
   return (
     <div>
       <h3>Description</h3>

@@ -1,13 +1,7 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import products from "../../constant/products";
 import stockPrice from "../../constant/stock-price";
-import { DataProducts, Message, StockPrice } from "./models/api.models";
+import { Message, StockPrice } from "./models/api.models";
 import { NextApiRequest, NextApiResponse } from "next";
 
-interface ProductId {
-  DataProducts: DataProducts[];
-  Stock: StockPrice;
-}
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<StockPrice | Message>
@@ -16,7 +10,8 @@ export default function handler(
     const { id } = req.query;
 
     if (id) {
-      const stock = stockPrice[Number(id)];
+      const stockData: StockPrice = stockPrice;
+      const stock = stockData[Number(id)];
       stock
         ? res.status(200).json(stock)
         : res.status(404).json({ message: "Product not found" });

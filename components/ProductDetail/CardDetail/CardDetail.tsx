@@ -9,11 +9,11 @@ import {
   StockDetail,
 } from "./components";
 
-type Props = { data: DataProducts };
+type Props = { data: DataProducts | any };
 
-const CardDetail = ({
+function CardDetail({
   data: { id, brand, image, origin, information, skus },
-}: Props) => {
+}: Props) {
   const [idStock, setIdStock] = useState(() => skus[0].code);
 
   return (
@@ -29,6 +29,6 @@ const CardDetail = ({
       </div>
     </>
   );
-};
+}
 
 export default CardDetail;

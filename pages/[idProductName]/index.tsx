@@ -1,14 +1,19 @@
-import { PageLayout } from "@/components";
-import ItemCard from "@/components/Card/ItemCard";
 import products from "@/constant/products";
-import NavbarDetail from "./components/Navbar/NavbarDetail";
-import { PropsParams } from "./models/idProduct.models";
-import CardDetail from "./components/CardDetail/CardDetail";
+import { CardDetail, NavbarDetail, PageLayout } from "@/components";
+import { GetServerSideProps, GetServerSidePropsContext } from "next";
+import { ParsedUrlQuery } from "querystring";
+ interface PropsParams {
+  id: string;
+  productName: string[];
+}
 
-export async function getServerSideProps(context): Promise<{
-  props: PropsParams;
-}> {
-  const idProductName = context.params.idProductName.split("-");
+export const getServerSideProps: GetServerSideProps<PropsParams> = async (
+  context: GetServerSidePropsContext<ParsedUrlQuery>
+) => {
+  const idProductName: string[] | any =
+    typeof context?.params?.idProductName === "string"
+      ? context.params.idProductName.split("-")
+      : undefined;
   const [id, ...productName] = idProductName;
 
   return {
@@ -17,7 +22,7 @@ export async function getServerSideProps(context): Promise<{
       productName,
     },
   };
-}
+};
 
 const ProductDetail = ({ id, productName }: PropsParams) => {
   const productFormat = productName.join(" ");

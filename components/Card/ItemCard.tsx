@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 import style from "./card.module.css";
 import Link from "next/link";
 import { DataProducts } from "@/pages/api/models/api.models";

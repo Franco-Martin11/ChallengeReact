@@ -1,7 +1,7 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 
-type Props = { image: HTMLImageElement; alt: string };
+type Props = { image: StaticImageData; alt: string };
 
 const AvatarIcon = (props: Props) => {
   return (

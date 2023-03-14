@@ -1,12 +1,22 @@
 import React, { useState } from "react";
-import { SizeProduct } from "../models/cardDetail.models";
 import style from "../cardDetail.module.css";
-type Products = { skus: SizeProduct[]; setIdStock: Function; idStock: string };
+type skus = { code: string; name: string };
+
+interface Products {
+  skus: skus[];
+  setIdStock: Function;
+  idStock: string;
+}
 
 const SizeProduct = ({ skus, setIdStock, idStock }: Products) => {
   const [initialProduct, setInitialProduct] = useState(() => skus[0].code);
 
-  const handleClickProduct = (ev: MouseEvent) => setIdStock(ev.target.value);
+  const handleClickProduct = (
+    ev: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    const { value } = ev.currentTarget;
+    setIdStock(value);
+  };
 
   return (
     <div className={style.sizeProduct_contianer}>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import style from "./homeLayout.module.css";
 import {
   CategoryFilter,
@@ -6,8 +6,8 @@ import {
   MenuNavbar,
   SearchBar,
 } from "./components";
-
-const HomeLayout = ({ children }) => {
+type Props = { children: ReactNode };
+const HomeLayout = ({ children }:Props) => {
   return (
     <div className={style.homeLayout_container}>
       <MenuNavbar />

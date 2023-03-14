@@ -29,7 +29,8 @@ const CategoryFilter = () => {
   const handleSetValue = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
-    setFilter(event.target.value);
+    const { name } = event.currentTarget;
+    setFilter(name);
   };
 
   return (
@@ -39,7 +40,7 @@ const CategoryFilter = () => {
         {CategoryFilterData.map((category) => (
           <button
             key={category.id}
-            value={category.value}
+            name={category.value}
             onClick={(ev) => handleSetValue(ev)}
             className={
               filter === category.value

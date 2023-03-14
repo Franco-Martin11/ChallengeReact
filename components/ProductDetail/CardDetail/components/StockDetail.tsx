@@ -2,14 +2,14 @@ import { fetcher } from "@/utils/Fetcher";
 import { formatedNumber } from "@/utils/FormatNumber";
 import useSWR from "swr";
 import style from "../cardDetail.module.css";
-type StockDetail = {
-  id: number;
+
+type stockDetail = {
+  id: string;
   brand: string;
   origin: string;
-  stockProduct: { stock: number; price: number };
 };
 
-const StockDetail = ({ id, brand, origin }: StockDetail) => {
+const StockDetail = ({ id, brand, origin }: stockDetail) => {
   const { data, isLoading, error } = useSWR(
     `api/stock-price?id=${id}`,
     fetcher,
