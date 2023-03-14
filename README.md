@@ -19,6 +19,9 @@ Technical requirements:
 
 Keep in mind that the prices are stored in cents, but should be displayed in dollars with 2 digits cents (e.g. if a product's price is 4350, then it should be shown as $43.50).
 
+### Demo link:
+
+Access my site at [BeerShop](https://challenge-react-gules.vercel.app/)
 
 ## Getting Started
 
