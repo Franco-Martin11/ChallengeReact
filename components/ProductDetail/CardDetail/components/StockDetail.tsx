@@ -14,7 +14,7 @@ const StockDetail = ({ id, brand, origin }: stockDetail) => {
     `api/stock-price?id=${id}`,
     fetcher,
     {
-      refreshInterval: 10000,
+      refreshInterval: 5000,
     }
   );
   {

@@ -15,7 +15,7 @@ const PriceItem = ({ id }: id) => {
     `api/stock-price?id=${id.code}`,
     fetcher,
     {
-      refreshInterval: 10000,
+      refreshInterval: 5000,
     }
   );
   return (
