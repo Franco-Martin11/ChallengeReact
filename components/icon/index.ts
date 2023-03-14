@@ -1,0 +1,11 @@
+export { default as AddCartIcon } from './AddCartIcon';
+export { default as AvatarIcon } from './AvatarIcon';
+export { default as BackIcon } from './BackIcon';
+export { default as BagIcon } from './BagIcon';
+export { default as CheckOutIcon } from './CheckOutIcon';
+export { default as ConfigIcon } from './ConfigIcon';
+export { default as HamburgerIcon } from './HamburgerIcon';
+export { default as HomeIcon } from './HomeIcon';
+export { default as KebabIcon } from './KebabIcon';
+export { default as PlusIcon } from './PlusIcon';
+export { default as SearchIcon } from './SearchIcon';
