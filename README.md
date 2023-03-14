@@ -1,4 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### The purpose of this challenge is to build a beer e-commerce.
+
+There is a file with all the products details (products.js), and the images we want to show for each product (one image per product). Also, there is a separate file with the stock and price value, which is in a different one because that data gets updated more frequently.
+
+We want to build a Next.js app with two pages:
+
+- Product Listing Page (PLP) that displays the brand and image of all the products (this page should be the Home Page)
+- Product Detail Page (PDP) that displays all the information for a single product.
+
+Technical requirements:
+
+- Build an API endpoint that returns stock and price information for a given product SKU code
+- The PDP must update the stock and price information every 5 seconds using the API endpoint
+- The products.js file should not be modified
+- The stock-price.js file should only be modified to test the update every 5 seconds requirement.
+- The PLP should be the Home Page
+- The PDP should be accessible through the URL /productId-productBrand (i.e. for a product with id 5 and brand "Modelo Especial", the URL should be /5-modelo- especial)
+- The API endpoint to get the stock and price information should be GET /api/stock- price/code (i.e. for a product SKU with code 123, the URL should be /api/stock- price/123)
+
+Keep in mind that the prices are stored in cents, but should be displayed in dollars with 2 digits cents (e.g. if a product's price is 4350, then it should be shown as $43.50).
+
 
 ## Getting Started
 
@@ -16,23 +36,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
