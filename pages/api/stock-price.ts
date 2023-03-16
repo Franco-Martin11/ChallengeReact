@@ -6,6 +6,7 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<StockPrice | Message>
 ) {
+  res.setHeader('Cache-Control', 's-maxage=86400');
   if (req.method === "GET") {
     const { id } = req.query;
 
