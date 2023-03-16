@@ -16,6 +16,7 @@ const PriceItem = ({ id }: id) => {
     fetcher,
     {
       refreshInterval: 5000,
+      revalidateOnFocus: false,
     }
   );
   return (

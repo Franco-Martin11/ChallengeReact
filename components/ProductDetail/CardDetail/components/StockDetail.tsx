@@ -14,6 +14,7 @@ const StockDetail = ({ id, brand, origin }: stockDetail) => {
     `api/stock-price?id=${id}`,
     fetcher,
     {
+      revalidateOnFocus: false,
       refreshInterval: 5000,
     }
   );

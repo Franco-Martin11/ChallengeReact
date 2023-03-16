@@ -13,7 +13,7 @@ const SearchBar = (props: Props) => {
       onSubmit={(ev) => handleSearch(ev)}
       action=""
     >
-      <button type="submit">
+      <button type="submit" title="Search">
         <SearchIcon />
       </button>
       <input placeholder="Search burger, pizza, drink or etc..." type="text" />

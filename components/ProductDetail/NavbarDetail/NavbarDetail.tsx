@@ -10,7 +10,7 @@ const NavbarDetail = (props: Props) => {
   const handlePrevPage = (): void => router.back();
   return (
     <div className={style.navbar_container}>
-      <button onClick={handlePrevPage}>
+      <button title="Back button" onClick={handlePrevPage}>
         <BackIcon />
       </button>
       <h2>Detail</h2>
