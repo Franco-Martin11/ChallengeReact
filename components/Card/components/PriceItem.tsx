@@ -17,6 +17,8 @@ const PriceItem = ({ id }: id) => {
     {
       refreshInterval: 5000,
       revalidateOnFocus: false,
+      revalidateOnReconnect: false,
+      refreshWhenOffline: false,
     }
   );
   return (

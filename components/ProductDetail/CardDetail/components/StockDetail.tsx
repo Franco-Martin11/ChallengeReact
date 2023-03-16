@@ -16,6 +16,8 @@ const StockDetail = ({ id, brand, origin }: stockDetail) => {
     {
       revalidateOnFocus: false,
       refreshInterval: 5000,
+      revalidateOnReconnect: false,
+      refreshWhenOffline: false,
     }
   );
   {
